@@ -20,7 +20,7 @@ public class ListarPedidosServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/listadoPartidos.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/listadoPedidos.jsp");
 
         List<Pedido> listado = this.pedidoDAO.getAll();
         request.setAttribute("listado", listado);

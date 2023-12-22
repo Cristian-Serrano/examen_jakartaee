@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JSP - Hello World</title>
+  <title>Examen - Hello World</title>
 </head>
 <body>
   <h1>Redirigiendo. Por favor, espere...<h1>

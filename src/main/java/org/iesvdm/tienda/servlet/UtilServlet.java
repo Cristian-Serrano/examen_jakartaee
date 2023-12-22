@@ -26,19 +26,6 @@ public class UtilServlet {
         BigDecimal limiteCredito;
 
         try {
-            Objects.requireNonNull(request.getParameter("nombre"));
-            if (request.getParameter("nombre").isBlank()) throw new RuntimeException("Parámetro vacío o todo espacios blancos.");
-            nombre = request.getParameter("nombre");
-
-            estatura = Integer.parseInt(request.getParameter("estatura"));
-
-            edad = Integer.parseInt(request.getParameter("edad"));
-
-            Objects.requireNonNull(request.getParameter("localidad"));
-            if (request.getParameter("localidad").isBlank()) throw new RuntimeException("Parámetro vacío o todo espacios blancos.");
-            localidad = request.getParameter("localidad");
-
-            return Optional.of(new Cliente(-1, nombre, estatura, edad, localidad));
 
         } catch (Exception ex) {
             ex.printStackTrace();

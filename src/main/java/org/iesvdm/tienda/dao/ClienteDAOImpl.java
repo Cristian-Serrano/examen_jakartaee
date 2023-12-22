@@ -61,14 +61,14 @@ public class ClienteDAOImpl extends AbstractDAOImpl implements ClienteDAO {
         try {
             conn = connectDB();
 
-            ps = conn.prepareStatement("UPDATE cliente SET nombre = ?, estatura = ?, edad = ?, localidad = ?  WHERE socioID = ?");
+            ps = conn.prepareStatement("UPDATE cliente SET nombre_cliente = ?, nombre_contacto = ?, apellido_contacto = ?, telefono = ?  WHERE codigo_cliente = ?");
             int idx = 1;
-            ps.setString(idx++, cliente.getNombre());
-            ps.setInt(idx++, cliente.getEstatura());
-            ps.setInt(idx++, cliente.getEdad());
-            ps.setString(idx, cliente.getLocalidad());
+            ps.setString(idx++, cliente.getNombreCliente());
+            ps.setString(idx++, cliente.getNombreContacto());
+            ps.setString(idx++, cliente.getApellidoContacto());
+            ps.setString(idx, cliente.getTelefono());
 
-            ps.setInt(idx++, cliente.getSocioId());
+            ps.setInt(idx++, cliente.getCodigoCliente());
 
             int rows = ps.executeUpdate();
 
